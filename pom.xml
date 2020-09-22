@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Global Trade Management Layer The Best Ever</artifactId>
+    <artifactId>gtml-tbe</artifactId>
+    <description>Global Trade Management Layer The Best Ever</description>
     <version>1.0-SNAPSHOT</version>
 
 
