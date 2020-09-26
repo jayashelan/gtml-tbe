@@ -40,6 +40,17 @@
         <!-- commons -->
         <commons-lang3-version>3.11</commons-lang3-version>
 
+        <!-- lombak version -->
+        <lombok-version>1.18.12</lombok-version>
+
+        <!-- jackson -->
+        <jackson-databind-version>2.11.2</jackson-databind-version>
+
+        <!-- guice -->
+        <guice-version>4.2.3</guice-version>
+
+        <!-- camel -->
+        <camel-bindy-version>3.5.0</camel-bindy-version>
 
 
 
@@ -114,6 +125,32 @@
             <artifactId>jaxb-api</artifactId>
             <version>${jaxb-api-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok-version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${guice-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-bindy</artifactId>
+            <version>${camel-bindy-version}</version>
+        </dependency>
+
+
 
     </dependencies>
     </dependencyManagement>
