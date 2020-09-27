@@ -52,6 +52,11 @@
         <!-- camel -->
         <camel-bindy-version>3.5.0</camel-bindy-version>
 
+        <!-- logging -->
+        <slf4j-jboss-logging-version>1.2.1.Final</slf4j-jboss-logging-version>
+       <log4j-api-version>2.13.3</log4j-api-version>
+        <log4j-core-version>2.13.3</log4j-core-version>
+        <log4j-slf4j-impl-version>2.13.3</log4j-slf4j-impl-version>
 
 
     </properties>
@@ -149,6 +154,26 @@
             <artifactId>camel-bindy</artifactId>
             <version>${camel-bindy-version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.jboss.slf4j</groupId>
+            <artifactId>slf4j-jboss-logging</artifactId>
+           <version>${slf4j-jboss-logging-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-api-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j-core-version}</version>
+        </dependency>
+
+
 
 
 
