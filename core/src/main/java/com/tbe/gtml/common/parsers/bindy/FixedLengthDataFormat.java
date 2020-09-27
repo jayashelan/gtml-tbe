@@ -5,6 +5,7 @@ import com.tbe.gtml.common.parsers.serialization.SerDe;
 import com.tbe.gtml.common.parsers.serialization.SerDeException;
 
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.dataformat.bindy.*;
 import org.apache.camel.spi.PackageScanClassResolver;
@@ -18,8 +19,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-@Log4j2
+@Slf4j
 public class FixedLengthDataFormat<T> extends BindyAbstractDataFormat implements SerDe<T> {
+
 
     private String objectType;
 

@@ -4,7 +4,7 @@ import com.tbe.gtml.common.parsers.bindy.FixedLengthDataFormat;
 import com.tbe.gtml.common.parsers.serialization.SerDe;
 import com.tbe.gtml.common.parsers.serialization.SerDeException;
 import com.tbe.gtml.model.fixedlength.FixedLengthHeader;
-import com.tbe.gtml.model.fixedlength.FixedLengthPojo;
+import com.tbe.gtml.model.fixedlength.FixedLengthTrade;
 
 
 import java.util.ArrayList;
@@ -12,21 +12,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FixedLengthSerDe implements SerDe<com.tbe.gtml.model.fixedlength.FixedLengthPojo> {
+public class FixedLengthSerDe implements SerDe<FixedLengthTrade> {
 
-    private final FixedLengthDataFormat<FixedLengthPojo> dataFormat;
+    private final FixedLengthDataFormat<FixedLengthTrade> dataFormat;
 
-    public FixedLengthSerDe(FixedLengthDataFormat<FixedLengthPojo> dataFormat) {
+    public FixedLengthSerDe(FixedLengthDataFormat<FixedLengthTrade> dataFormat) {
         this.dataFormat = dataFormat;
     }
 
     @Override
-    public FixedLengthPojo fromBytes(byte[] bytes) throws SerDeException {
+    public FixedLengthTrade fromBytes(byte[] bytes) throws SerDeException {
         return this.dataFormat.fromBytes(bytes);
     }
 
     @Override
-    public byte[] toBytes(FixedLengthPojo object) throws SerDeException {
+    public byte[] toBytes(FixedLengthTrade object) throws SerDeException {
 
         List<Map<String,Object>> models = new ArrayList<>();
         Map<String,Object> model = new HashMap<>();
@@ -34,7 +34,7 @@ public class FixedLengthSerDe implements SerDe<com.tbe.gtml.model.fixedlength.Fi
         models.add(model);
 
         model = new HashMap<>();
-        model.put(FixedLengthPojo.class.getName(),object);
+        model.put(FixedLengthTrade.class.getName(),object);
 
         return this.dataFormat.toBytes(models);
 

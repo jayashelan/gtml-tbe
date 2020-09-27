@@ -6,7 +6,7 @@ import org.apache.camel.dataformat.bindy.annotation.Link;
 
 @Data
 @FixedLengthRecord(length = 100,paddingChar = ' ')
-public class FixedLengthPojo {
+public class FixedLengthTrade {
 
     @Link
     private FixedLengthHeader header;
