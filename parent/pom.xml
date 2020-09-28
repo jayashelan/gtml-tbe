@@ -62,6 +62,10 @@
         <org.eclipse.persistence.moxy-version>2.7.7</org.eclipse.persistence.moxy-version>
         <jaxb-api-version>2.3.1</jaxb-api-version>
 
+        <!-- joda -->
+        <joda-time-version>2.10.6</joda-time-version>
+
+
     </properties>
     <dependencyManagement>
     <dependencies>
@@ -182,6 +186,11 @@
             <version>${org.eclipse.persistence.moxy-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda-time-version}</version>
+        </dependency>
 
 
     </dependencies>
