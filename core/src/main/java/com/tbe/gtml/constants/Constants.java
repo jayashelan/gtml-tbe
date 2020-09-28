@@ -14,6 +14,8 @@ public final class Constants {
     /** query parameters separator used in kafka url builder **/
     public static final String URL_QUERY_PARAMS_DELIMITER = "&";
 
+    /** application **/
+    public final static String UTF ="UTF-8";
 
 
 }

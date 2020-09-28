@@ -28,7 +28,7 @@
         <quarkus-qpid-jms-version>0.18.0</quarkus-qpid-jms-version>
         <camel-kafka-version>3.5.0</camel-kafka-version>
         <quarkus-spring-boot-properties-version>1.8.1.Final</quarkus-spring-boot-properties-version>
-        <jaxb-api-version>2.3.1</jaxb-api-version>
+
 
         <!-- maven -->
         <quarkus-maven-plugin-version>1.8.1.Final</quarkus-maven-plugin-version>
@@ -58,6 +58,9 @@
         <log4j-core-version>2.13.3</log4j-core-version>
         <log4j-slf4j-impl-version>2.13.3</log4j-slf4j-impl-version>
 
+        <!-- jaxb-->
+        <org.eclipse.persistence.moxy-version>2.7.7</org.eclipse.persistence.moxy-version>
+        <jaxb-api-version>2.3.1</jaxb-api-version>
 
     </properties>
     <dependencyManagement>
@@ -173,7 +176,11 @@
             <version>${log4j-core-version}</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.moxy</artifactId>
+            <version>${org.eclipse.persistence.moxy-version}</version>
+        </dependency>
 
 
 
