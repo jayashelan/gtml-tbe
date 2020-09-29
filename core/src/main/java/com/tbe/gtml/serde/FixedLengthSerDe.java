@@ -1,8 +1,8 @@
-package com.tbe.gtml.model.serde;
+package com.tbe.gtml.serde;
 
-import com.tbe.gtml.common.parsers.bindy.FixedLengthDataFormat;
-import com.tbe.gtml.common.parsers.serialization.SerDe;
-import com.tbe.gtml.common.parsers.serialization.SerDeException;
+import com.tbe.gtml.parsers.bindy.FixedLengthDataFormat;
+import com.tbe.gtml.parsers.serialization.SerDe;
+import com.tbe.gtml.parsers.serialization.SerDeException;
 import com.tbe.gtml.model.fixedlength.FixedLengthHeader;
 import com.tbe.gtml.model.fixedlength.FixedLengthTrade;
 

@@ -1,10 +1,9 @@
-package com.tbe.gtml.common.parsers.bindy;
+package com.tbe.gtml.parsers.bindy;
 
-import com.tbe.gtml.common.constants.ErrorCode;
-import com.tbe.gtml.common.parsers.serialization.SerDe;
-import com.tbe.gtml.common.parsers.serialization.SerDeException;
+import com.tbe.gtml.constants.ErrorCode;
+import com.tbe.gtml.parsers.serialization.SerDe;
+import com.tbe.gtml.parsers.serialization.SerDeException;
 
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.dataformat.bindy.*;

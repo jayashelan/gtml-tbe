@@ -3,13 +3,13 @@ package com.tbe.gtml.module;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
-import com.tbe.gtml.common.parsers.bindy.FixedLengthDataFormat;
-import com.tbe.gtml.common.parsers.bindy.XmlDataFormat;
-import com.tbe.gtml.common.parsers.serialization.SerDe;
+import com.tbe.gtml.parsers.bindy.FixedLengthDataFormat;
+import com.tbe.gtml.parsers.bindy.XmlDataFormat;
+import com.tbe.gtml.parsers.serialization.SerDe;
 import com.tbe.gtml.model.fixedlength.FixedLengthTrade;
-import com.tbe.gtml.model.serde.FixedLengthSerDe;
-import com.tbe.gtml.model.serde.XmlSerde;
 import com.tbe.gtml.model.xml.*;
+import com.tbe.gtml.serde.FixedLengthSerDe;
+import com.tbe.gtml.serde.XmlSerDe;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 
@@ -44,7 +44,7 @@ public class MapperModule  extends AbstractModule {
         try {
             JAXBContext jaxbContext = JAXBContextFactory.createContext(classes,null);
             XmlDataFormat<XmlTrade> dataFormat = new XmlDataFormat<>(jaxbContext);
-            return new XmlSerde(dataFormat);
+            return new XmlSerDe(dataFormat);
         } catch (JAXBException e) {
             throw new RuntimeException(e);
         }

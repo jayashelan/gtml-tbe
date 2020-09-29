@@ -1,4 +1,4 @@
-package com.tbe.gtml.common.constants;
+package com.tbe.gtml.constants;
 
 
 public enum ErrorCode {

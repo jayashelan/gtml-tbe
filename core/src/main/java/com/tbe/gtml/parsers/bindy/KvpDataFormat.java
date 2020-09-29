@@ -1,8 +1,9 @@
-package com.tbe.gtml.common.parsers.bindy;
+package com.tbe.gtml.parsers.bindy;
 
-import com.tbe.gtml.common.constants.ErrorCode;
-import com.tbe.gtml.common.parsers.serialization.SerDe;
-import com.tbe.gtml.common.parsers.serialization.SerDeException;
+
+import com.tbe.gtml.constants.ErrorCode;
+import com.tbe.gtml.parsers.serialization.SerDe;
+import com.tbe.gtml.parsers.serialization.SerDeException;
 import org.apache.camel.Exchange;
 import org.apache.camel.dataformat.bindy.BindyAbstractDataFormat;
 import org.apache.camel.dataformat.bindy.BindyAbstractFactory;
@@ -24,7 +25,7 @@ public class KvpDataFormat<T> extends BindyAbstractDataFormat implements SerDe<T
 
     private BindyAbstractFactory kvpFactory;
 
-    public KvpDataFormat(Class<T> objectType) throws SerDeException{
+    public KvpDataFormat(Class<T> objectType) throws SerDeException {
         this.setClassType(objectType);
     }
 
@@ -71,7 +72,7 @@ public class KvpDataFormat<T> extends BindyAbstractDataFormat implements SerDe<T
             return (T) models.get(0).get(this.objectType);
 
         } catch (Exception e) {
-            throw new SerDeException(e,ErrorCode.SERDE_PARSER_EXCEPTION);
+            throw new SerDeException(e, ErrorCode.SERDE_PARSER_EXCEPTION);
         }finally {
             scanner.close();
         }

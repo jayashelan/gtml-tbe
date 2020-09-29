@@ -1,4 +1,4 @@
-package com.tbe.gtml.common.parsers.serialization;
+package com.tbe.gtml.parsers.serialization;
 
 public interface SerDe<T> extends Serializer<T>,DeSerializer<T> {
 }

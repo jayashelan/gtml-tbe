@@ -1,6 +1,7 @@
-package com.tbe.gtml.common.parsers.serialization;
+package com.tbe.gtml.parsers.serialization;
 
-import com.tbe.gtml.common.constants.ErrorCode;
+
+import com.tbe.gtml.constants.ErrorCode;
 
 public class SerDeException extends Exception{
 
