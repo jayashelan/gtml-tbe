@@ -1,4 +1,4 @@
-package com.tbe.gtml.util;
+package com.tbe.gtml.commons.util;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

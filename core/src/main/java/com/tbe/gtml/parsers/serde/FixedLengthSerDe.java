@@ -1,4 +1,4 @@
-package com.tbe.gtml.serde;
+package com.tbe.gtml.parsers.serde;
 
 import com.tbe.gtml.parsers.bindy.FixedLengthDataFormat;
 import com.tbe.gtml.parsers.serialization.SerDe;

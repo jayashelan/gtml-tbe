@@ -4,7 +4,7 @@ package com.tbe.gtml.components;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.quarkus.arc.config.ConfigProperties;
 
-@ConfigProperties(prefix = "kafka")
+//@ConfigProperties(prefix = "kafka")
 public class KafkaConfigs {
 
     @JsonIgnore

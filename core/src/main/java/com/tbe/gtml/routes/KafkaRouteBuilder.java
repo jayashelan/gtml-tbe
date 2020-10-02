@@ -1,9 +1,10 @@
 package com.tbe.gtml.routes;
 
 
+import com.tbe.gtml.commons.util.GsonUtils;
 import com.tbe.gtml.components.KafkaConfig;
-import com.tbe.gtml.components.KafkaConfigs;
 import com.tbe.gtml.processor.KafkaProcessor;
+import io.quarkus.arc.config.ConfigProperties;
 import org.apache.camel.Exchange;
 import org.apache.camel.Predicate;
 import org.apache.camel.builder.PredicateBuilder;
@@ -13,6 +14,7 @@ import org.apache.camel.component.kafka.KafkaManualCommit;
 import org.apache.camel.throttling.ThrottlingExceptionRoutePolicy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -28,14 +30,18 @@ public class KafkaRouteBuilder extends RouteBuilder {
 	@Inject
 	private KafkaConfig kafkaConfig;
 
+	@Inject
+	private ConfigProperties properties;
+
 	/**
 	 * Defines a Kafka Route with a ThrottlingExceptionRoutePolicy
 	 */
 	@Override
 	public void configure() throws Exception {
 		logger.info("configure():start");
+		logger.info(String.valueOf(properties));
 
-		if (kafkaConfig.getConfigs().getTopic() != null
+		/*if (kafkaConfig.getConfigs().getTopic() != null
 				&& kafkaConfig.getCamelKafkaOptions() != null
 				&& !kafkaConfig.getCamelKafkaOptions().isEmpty()) {
 
@@ -49,7 +55,7 @@ public class KafkaRouteBuilder extends RouteBuilder {
 						.process(this::doManualCommit)
 					.otherwise()
 						.end();
-		}
+		}*/
 	}
 
 	private Predicate getManualCommitPredicate() {

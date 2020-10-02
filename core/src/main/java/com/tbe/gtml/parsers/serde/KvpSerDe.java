@@ -1,10 +1,10 @@
-package com.tbe.gtml.serde;
+package com.tbe.gtml.parsers.serde;
 
 import com.tbe.gtml.model.kvp.*;
 import com.tbe.gtml.parsers.bindy.KvpDataFormat;
 import com.tbe.gtml.parsers.serialization.SerDe;
 import com.tbe.gtml.parsers.serialization.SerDeException;
-import com.tbe.gtml.util.LambdaUtils;
+import com.tbe.gtml.commons.util.LambdaUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,24 +32,18 @@ public class KvpSerDe implements SerDe<KvpTrade> {
         models.add(Map.of(KvpHeader.class.getName(), object.getHeader()));
 
         //KvpBargainCondition  - one to many
-        LambdaUtils.collectionAsStream(object.getBargainConditions()).forEach(kvpBargainCondition -> {
-            models.add(Map.of(KvpBargainCondition.class.getName(), kvpBargainCondition));
-        });
+        LambdaUtils.collectionAsStream(object.getBargainConditions()).forEach(kvpBargainCondition -> models.add(Map.of(KvpBargainCondition.class.getName(), kvpBargainCondition)));
 
         //  KvpNoOfFees
         models.add(Map.of(KvpNoOfFees.class.getName(), object.getNoOfFees()));
 
         // KvpMiscFee - one to many
-        LambdaUtils.collectionAsStream(object.getMiscFees()).forEach(kvpMiscFee -> {
-            models.add(Map.of(KvpMiscFee.class.getName(), kvpMiscFee));
-        });
-        //KvpNoOfAccts
+        LambdaUtils.collectionAsStream(object.getMiscFees()).forEach(kvpMiscFee -> models.add(Map.of(KvpMiscFee.class.getName(), kvpMiscFee)));
+        //Kvp No Of Accounts
         models.add(Map.of(KvpNoOfAccts.class.getName(), object.getNoOfAccts()));
 
         //KvpAltAcct - one to many
-        LambdaUtils.collectionAsStream(object.getAltAccts()).forEach(kvpAltAcct -> {
-            models.add(Map.of(KvpAltAcct.class.getName(), kvpAltAcct));
-        });
+        LambdaUtils.collectionAsStream(object.getAltAccts()).forEach(kvpAltAcct -> models.add(Map.of(KvpAltAcct.class.getName(), kvpAltAcct)));
         return dataFormat.toBytes(models);
     }
 }

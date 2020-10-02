@@ -6,6 +6,7 @@ public enum ErrorCode {
     SERDE_PARSER_EXCEPTION(1,"SERDE_PARSER_EXCEPTION");
 
 
+
     private int errorCode;
     private String description;
 
