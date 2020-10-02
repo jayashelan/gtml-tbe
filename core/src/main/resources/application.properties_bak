@@ -33,6 +33,18 @@ kafka.allow-manual-commit=true
 kafka.metadata-max-age-ms=5000
 
 
+gtml.kafka.topic=test
+gtml.kafka.errorTopic=test
+gtml.kafka.brokers=localhost:9092
+gtml.kafka.groupId=TestGroupName
+gtml.kafka.consumersCount=1
+gtml.kafka.autoOffsetReset=latest
+gtml.kafka.breakOnFirstError=false
+gtml.kafka.autocommitenable=false
+gtml.kafka.allowManualCommit=true
+gtml.kafka.metadataMaxAgeMs=5000
+
+
 
 #
 # Guice Properties
