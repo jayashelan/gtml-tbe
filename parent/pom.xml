@@ -58,6 +58,7 @@
        <log4j-api-version>2.13.3</log4j-api-version>
         <log4j-core-version>2.13.3</log4j-core-version>
         <log4j-slf4j-impl-version>2.13.3</log4j-slf4j-impl-version>
+        <log4j2-jboss-logmanager-version>1.0.0.Beta1</log4j2-jboss-logmanager-version>
 
         <!-- jaxb-->
         <org.eclipse.persistence.moxy-version>2.7.7</org.eclipse.persistence.moxy-version>
@@ -218,6 +219,12 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-config-yaml</artifactId>
             <version>${quarkus-config-yaml-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.logmanager</groupId>
+            <artifactId>log4j2-jboss-logmanager</artifactId>
+            <version>${log4j2-jboss-logmanager-version}</version>
         </dependency>
 
 

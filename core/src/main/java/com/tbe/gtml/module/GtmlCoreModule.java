@@ -14,6 +14,5 @@ public class GtmlCoreModule extends AbstractModule {
     protected void configure() {
         log.info("! Binding GtmlCoreModule !");
         install(new MapperModule());
-
     }
 }

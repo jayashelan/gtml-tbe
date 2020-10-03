@@ -81,15 +81,6 @@
             <artifactId>slf4j-jboss-logging</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -101,10 +92,15 @@
             <artifactId>joda-time</artifactId>
         </dependency>
 
+
+
         <!--<dependency>
             <groupId>org.amqphub.quarkus</groupId>
             <artifactId>quarkus-qpid-jms</artifactId>
         </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.jboss.logmanager/jboss-logmanager -->
+
+
 
 
 

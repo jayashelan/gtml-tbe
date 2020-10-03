@@ -10,29 +10,29 @@ camel:
     duration-hit-exit-code: 15
 gtml:
   kafka:
-    #allow-manual-commit: true
-    #autoOffsetReset: latest
-    #autocommitenable: false
-    #breakOnFirstError: false
-    #brokers: localhost:9092
-    #consumersCount: 1
-    #errorTopic: test
-    #groupId: TestGroupName
-    #metadataMaxAgeMs: 5000
-    topic: test
+    allow-manual-commit: 'true'
+    auto-offset-reset: 'latest'
+    auto-commit-enable: 'false'
+    break-on-first-error: 'false'
+    brokers: 'localhost:9092'
+    consumers-count: '1'
+    error-topic: 'test'
+    group-id: 'TestGroupName'
+    metadata-max-age-ms: '5000'
+    topic: 'test'
 guice:
   modules: 'com.tbe.gtml.module.GtmlCoreModule '
 kafka:
-  allow-manual-commit: true
-  auto-commit-enable: false
-  auto-offset-reset: latest
-  break-on-first-error: false
-  brokers: localhost:9092
-  consumers-count: 1
-  error-topic: test
-  group-id: TestGroupName
-  metadata-max-age-ms: 5000
-  topic: test
+  allow-manual-commit: 'true'
+  auto-commit-enable: 'false'
+  auto-offset-reset: 'latest'
+  break-on-first-error: 'false'
+  brokers: 'localhost:9092'
+  consumers-count: '1'
+  error-topic: 'test'
+  group-id: 'TestGroupName'
+  metadata-max-age-ms: '5000'
+  topic: 'test'
 quarkus:
   arc:
     remove-unused-beans: false
